@@ -8,10 +8,18 @@ bot.on('message' , (message) =>{
 	if(txt == '!shootToAndromeda' || txt == '!shoottoandromeda' || txt.includes("France") || txt.includes("france") || txt.includes("FRANCE"))
 		message.channel.sendMessage('I  will  kill  you  France');
 	if((txt.includes("ANDROMEDA") || txt.includes("andromeda") || txt.includes("Andromeda")) && !txt.includes("shoot"))
+	{
 		if(quote)
+		{
 			message.channel.sendMessage('war				is				coming');	
+			quote=false;
+		}
 		else
+		{
 			message.channel.sendMessage('I   will   find   you   and    I   will   kill    you');	
+			quote=true;
+		}
+	}
 	if(txt.includes("jaja") || txt.includes("JAJA") || txt.includes("haha") || txt.includes("HAHA"))
 		message.channel.sendMessage('lol');
 	if(txt.includes("xd") || txt.includes("xD") || txt.includes("XD"))
